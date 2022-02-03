@@ -41,9 +41,10 @@ namespace Selenium3
 
             // Get the page title text.
             var titleText = webdriver.Title;
+            var expectedTitleText = "Swag Labs";
 
             // Assert that the title of the page contains "Swag Labs" text.
-            Assert.That(titleText.Contains("Swag Labs"), $"The page title does not contain 'Swag Labs', instead contains : {titleText}");
+            Assert.That(titleText.Contains(expectedTitleText), $"The page title does not contain '{expectedTitleText}', instead contains : {titleText}");
         }
 
         [Test, Category("Regression"), Category("Production"), Category("Stage"), Category("Test"), TestCaseSource("TestUsers")]
